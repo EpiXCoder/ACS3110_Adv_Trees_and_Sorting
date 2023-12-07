@@ -3,6 +3,7 @@
 from sorting import random_ints
 from sorting_iterative import is_sorted, bubble_sort, selection_sort, insertion_sort
 # from sorting_recursive import merge_sort, quick_sort
+from sorting_integer import counting_sort, bucket_sort
 
 sort = bubble_sort
 
@@ -97,3 +98,14 @@ def test_sort_on_seven_dwarf_names():
     sorted_items = sorted(items)  # Copy
     sort(items)  # Mutate
     assert items == sorted_items
+
+if __name__ == "__main__":
+    test_is_sorted_on_sorted_integers()
+    test_is_sorted_on_unsorted_integers()
+    test_is_sorted_on_sorted_strings()
+    test_sort_on_empty_list()
+    test_sort_on_small_lists_of_integers()
+    test_sort_on_small_lists_of_strings()
+    test_sort_on_fish_book_title()
+    test_sort_on_fish_book_title()
+    test_sort_on_seven_dwarf_names()
